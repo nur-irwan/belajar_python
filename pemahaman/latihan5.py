@@ -12,11 +12,12 @@ maks_percobaan = 3
 while percobaan < maks_percobaan:
     username =input("Username :")
     password =input("Password :")
-    if username_benar == username and password_benar == password_benar:
+    if username_benar == username and password_benar == password:
         print("Login Berhasil")
+        break
     else:
         percobaan += 1
         print("username atau password salah!")
         print(f"sisa percobaan : {maks_percobaan - percobaan}")
-if maks_percobaan == percobaan:
+if percobaan == maks_percobaan:
     print("akun terkunci, silahkan coba lg nanti")
