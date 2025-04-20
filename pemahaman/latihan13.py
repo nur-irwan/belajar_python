@@ -28,7 +28,9 @@ while percobaan < maks_percobaan:
                 riwayat.append(f"{waktu} - Setor: Rp.{setor:,}")
                 print(f"Setor Berhasil, Saldo Anda Rp.{saldo:,}")
                 with open("transaksi_atm.txt", "a") as file:
+                    file.write("===ATM Mini====\n")
                     file.write(f"{waktu}, Setor : Rp.{setor:,}\n")
+                    file.write("Terima Kasih Sudah Menggunakan ATM Mini")
             elif menu == "3" :
                 tarik_tunai = int(input("Masukkan Nominal : Rp."))
                 if tarik_tunai > saldo:
@@ -39,7 +41,9 @@ while percobaan < maks_percobaan:
                     riwayat.append(f"{waktu} - Tarik Tunai: Rp.{tarik_tunai:,}")
                     print(f"Tarik Tunai Berhasil, Sisa Saldo Rp.{saldo:,}")
                     with open("transaksi_atm.txt", "a") as file:
+                        file.write("===ATM Mini====\n")
                         file.write(f"{waktu}, Tarik Tunai : Rp.{tarik_tunai:,}\n")
+                        file.write("Terima Kasih Sudah Menggunakan ATM Mini")
             elif menu == "4":
                 print("===Riwayat Transaksi===")
                 if len(riwayat) == 0:
