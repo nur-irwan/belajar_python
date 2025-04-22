@@ -18,7 +18,8 @@ while percobaan < maks_percobaan:
             print("3. Tarik Tunai")
             print("4. Riwayat")
             print("5. Keluar")
-            menu = input("Pilih menu (1/2/3/4/5): ")
+            print("6, Baca isi file txt")
+            menu = input("Pilih menu (1/2/3/4/5/6): ")
             if menu == "1":
                 print(f"Saldo anda adalah Rp.{saldo:,}")
             elif menu == "2":
@@ -54,6 +55,13 @@ while percobaan < maks_percobaan:
             elif menu == "5":
                 print("Terima Kasih Sudah Menggunakan ATM")
                 break
+            elif menu == "6":
+                print("=== Isi File transaksi_atm.txt ===")
+                try:
+                    with open("transaksi_atm.txt", "r") as file:
+                        print(file.read())
+                except FileNotFoundError:
+                    print("Belum ada file transaksi.")
             else:
                 print("Menu Tidak Valid")
         break
